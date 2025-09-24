@@ -15,7 +15,7 @@ public class Controller {
             System.out.println("✅ Connected to MySQL!");
 
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM 'country'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM country");
 
             while (rs.next()) {
                 System.out.println("Row: " + rs.getString(1)); // Adjust column index or name

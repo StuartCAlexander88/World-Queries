@@ -8,7 +8,7 @@ RUN mvn clean package
 FROM eclipse-temurin:17
 WORKDIR /app
 
-# Copy the shaded JAR from the builder stage
+# Copy the JAR from the builder stage
 COPY --from=build /app/target/World-Queries-1.0-SNAPSHOT.jar ./app.jar
 
 # Run the application
