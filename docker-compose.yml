@@ -9,7 +9,7 @@ services:
       MYSQL_USER: WedTeam1                    # Create database user account
       MYSQL_PASSWORD: reallySecurePassword!   # create a really good password for ourselves! 
     volumes:
-      - ./SET08103.sql:/docker-entrypoint-initdb.d/SET08103 
+      - ./SET08103.sql:/docker-entrypoint-initdb.d/SET08103.sql
     ports: 
       - "3306:3306"   # our java app should be able to connect through "localhost:3306" or container if we are running inside docker, so would be db:3306 (service name:port)
     networks:
